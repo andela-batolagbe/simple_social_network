@@ -1,0 +1,29 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+.DS_Store
+.idea
+*.scssc
+
+# Runtime data
+pids
+*.pid
+*.seed
+
+
+# node-waf configuration
+.lock-wscript
+
+# Compiled binary addons (http://nodejs.org/api/addons.html)
+build/Release
+
+# Dependency directory
+node_modules
+
+# Optional npm cache directory
+.npm
+
+#environment configuration
+.env
+bower_components

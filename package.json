@@ -1,0 +1,30 @@
+{
+  "name": "simple_social_network",
+  "version": "1.0.0",
+  "description": "a simple twitter-like social network app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo 'No test specified'",
+    "prestart": "rm -rf temp/*",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "social",
+    "code",
+    "challenge"
+  ],
+  "author": "bisoye atolagbe",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "cloudinary": "^1.4.6",
+    "connect-mongo": "^1.3.2",
+    "cookie-parser": "^1.4.3",
+    "dotenv": "^2.0.0",
+    "express": "^4.14.0",
+    "express-session": "^1.14.2",
+    "method-override": "^2.3.7",
+    "mongoose": "^4.7.5",
+    "multer": "^1.2.1"
+  }
+}
