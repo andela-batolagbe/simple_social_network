@@ -1,0 +1,69 @@
+/**
+ * documentManager App
+ * built by Bisoye
+ * Andela traininng checkpoint 4
+ */
+
+.main {
+  height: 100%;
+  margin: 5% auto;
+}
+
+.head {
+  font-weight: bold;
+  font-size: 20px;
+  margin-left: 10px;
+  color: rgb(76,175,80);
+}
+
+.add-post-wrapper {
+  padding-bottom: 10px;
+  padding-top: 3px;
+  background-color: #f9f9f9;
+}
+
+.btn {
+  color: #ffffff !important;
+  background-color: rgb(76,175,80) !important;
+}
+.card {
+  color: #666666;
+  padding: 40px 0;
+  background-color: #ffffff;
+}
+
+.file-label {
+  text-align: center;
+  margin-left: 20px;
+}
+.clear-space {
+  padding: 60px 0;
+}
+
+.username {
+  margin-left: 160px;
+  position: absolute;
+}
+
+.user-avatar {
+  margin-left: 10px;
+  margin-top: -15px;
+  position: absolute;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+}
+
+.post-text {
+  margin-left: 10px;
+}
+
+.post-divider {
+  border-top: 1px dashed #bbbbbb;
+}
+
+/*style for mobile devices*/
+@media only screen and (min-width: 320px) and (max-width: 550px) {
+
+
+}

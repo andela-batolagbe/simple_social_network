@@ -4,8 +4,8 @@
 require('dotenv').config();
 
 // import server configurations
-var db = require('./server/configs/db');
-var app = require('./server/configs/app');
+var db = require('./configs/db');
+var app = require('./configs/app');
 
 // run app on environment declared port or 5000
 var port = process.env.PORT || 5000;

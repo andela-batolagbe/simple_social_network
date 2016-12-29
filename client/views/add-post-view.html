@@ -1,0 +1,35 @@
+<div layout="column" class="add-post-wrapper md-whiteframe-z1">
+  <form name="postForm" novalidate>
+    <md-input-container ng-hide="returningUser" flex="50">
+     <label for="avatar" class="file-label">Select a profile picture</label>
+    <input name="avatar" ngf-select ng-model="avatar" id="avatar" type="file" ngf-max-size="20MB" accept="image/*">
+    </md-input-container>
+    <md-input-container ng-hide="returningUser" flex="50">
+      <input class="heading" name="username" ng-model="username" type="text" placeholder="Enter a username" ng-required="!returningUser">
+      <div ng-messages="postForm.username.$error">
+        <div ng-message="required">As a new user, you'll need to provide a username</div>
+      </div>
+    </md-input-container>
+    <div ng-show="returningUser">
+    <div class="card" flex layout="row">
+      <img src="{{user.avatar}}" class="user-avatar md-avatar md-whiteframe-z3"/>
+      <div>
+        <span class="md-headline username">{{user.username}}</span>
+      </div>
+    </div>
+    <div class="clear-space"></div>
+    </div>
+    <md-divider></md-divider>
+      <md-input-container class="md-block" flex="95">
+      <input class="heading" name="post" ng-model="postText" type="text" md-maxlength="100" placeholder="New post" required>
+      <div ng-messages="postForm.post.$error">
+        <div ng-message="required">A new post is required </div>
+        <div ng-message="md-maxlength">The post cannot be more than 100 characters long.</div>
+      </div>
+    </md-input-container>
+    <div>
+      <md-button type="submit" ng-disabled="postForm.$invalid" ng-click="addPost()" class="md-raised md-cornered btn"> Post
+      </md-button>
+    </div>
+  </form>
+</div>

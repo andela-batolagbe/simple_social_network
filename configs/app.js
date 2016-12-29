@@ -12,7 +12,7 @@ process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
 // load environment configurations
 var config = require('./config');
-var routes = require('../routes');
+var routes = require('../server/routes');
 
 var app = express();
 var router = express.Router();
@@ -23,10 +23,7 @@ app.use('/static', express.static(path.join(__dirname, '/../client/')));
 
 // parse body contents as a JSON objects
 // use body parser so we can get info from POST and/or URL parameters
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json({
-    type: 'application/vnd.api+json'
-}));
+app.use(bodyParser.json());
 
 // manage app API request sessions.
 app.use(session({
@@ -65,7 +62,7 @@ app.use(methodOverride('X-HTTP-Method-Override'));
 app.use('/api/', router);
 
 app.get('*', function(req, res) {
-  res.sendFile(path.join(__dirname, '/../../client/index.html'));
+  res.sendFile(path.join(__dirname, '/../client/index.html'));
 });
 
 

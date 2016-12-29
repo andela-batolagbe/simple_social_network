@@ -1,0 +1,32 @@
+{
+  "name": "simple_social_app",
+  "description": "a simple twitter-like social network app",
+  "main": "server.js",
+  "authors": [
+    "Atolagbe Abisoye"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "challenge",
+    "social",
+    "twitter"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-material": "^1.1.1",
+    "angular-ui-router": "ui-router#^0.3.2",
+    "ng-file-upload": "^12.2.13",
+    "ngstorage": "^0.3.11",
+    "ngToast": "ngtoast#^2.0.0"
+  },
+  "resolutions": {
+    "angular": "1.6.1"
+  }
+}

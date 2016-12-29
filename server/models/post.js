@@ -11,6 +11,9 @@ var postSchema = new Schema({
   text: {
     type: String,
 	require: true
+  },
+  dateCreated: {
+    type: Date
   }
 })
 
