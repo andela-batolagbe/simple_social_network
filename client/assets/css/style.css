@@ -22,6 +22,9 @@
   background-color: #f9f9f9;
 }
 
+.post-view {
+  background-color: #ffffff;
+}
 .btn {
   color: #ffffff !important;
   background-color: rgb(76,175,80) !important;

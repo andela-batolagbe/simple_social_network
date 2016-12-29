@@ -50,7 +50,7 @@
 
           ngToast.info({
             content: 'Creating your account....',
-            timeout: 6000
+            timeout: 20000
           });
 
           MainService.createUser(avatar, user)

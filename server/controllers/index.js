@@ -1,5 +1,6 @@
 'use strict';
 
+var fs = require('fs');
 var cloudinary = require('cloudinary');
 var config = require('../../configs/config');
 var User = require('../models/user');
@@ -41,6 +42,7 @@ module.exports = {
 		  });
 	    }
 
+    fs.unlinkSync(req.file.path)
 		var newUser = new User({
 		  username: req.body.username,
 		  avatar: response.url
