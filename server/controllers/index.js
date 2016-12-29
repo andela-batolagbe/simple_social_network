@@ -33,7 +33,6 @@ module.exports = {
 	   });
 	}
 	if (req.file) {
-    console.log('FILLLEE', req.file.path)
 	  uploadAvatar(req.file.path, function(response){
 	    if (response.error) {
 		  console.log('Error: cloudinary error', response.error)

@@ -21,6 +21,7 @@ app.use('/static', express.static(path.join(__dirname, '/../client/')));
 
 // parse body contents as a JSON objects
 // use body parser so we can get info from POST and/or URL parameters
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 // Allow cross origin requests
