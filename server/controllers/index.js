@@ -1,7 +1,7 @@
 'use strict';
 
 var cloudinary = require('cloudinary');
-var config = require('../configs/config');
+var config = require('../../configs/config');
 var User = require('../models/user');
 var Post = require('../models/post');
 
@@ -85,8 +85,9 @@ module.exports = {
 
   createPost: function(req, res) {
 	var newPost = new Post({
-	  user: req.body.userId,
-	  text: req.body.text
+	  user: req.body.user,
+	  text: req.body.text,
+    dateCreated: Date.now()
     });
 	newPost.save(function(err, post) {
 	  if (err) {
@@ -107,6 +108,7 @@ module.exports = {
   getPosts: function(req, res) {
 	Post.find({})
 	  .populate('user')
+    .sort({'dateCreated': -1})
 	  .exec(function(err, posts) {
 	    if (err) {
 		  console.log('Error: posts fetch error', err)
