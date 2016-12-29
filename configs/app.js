@@ -3,9 +3,7 @@
 var express = require('express');
 var mongoose = require('mongoose')
 var methodOverride = require('method-override');
-var session = require('express-session');
 var bodyParser = require('body-parser');
-var mongoStore = require('connect-mongo')(session);
 var path = require('path');
 
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
@@ -24,16 +22,6 @@ app.use('/static', express.static(path.join(__dirname, '/../client/')));
 // parse body contents as a JSON objects
 // use body parser so we can get info from POST and/or URL parameters
 app.use(bodyParser.json());
-
-// manage app API request sessions.
-app.use(session({
-  secret: config.secret,
-  store: new mongoStore({
-    mongooseConnection: mongoose.connection,
-  }),
-  saveUninitialized: true,
-  resave: false
-}));
 
 // Allow cross origin requests
 app.use(function(err, req, res, next) {
