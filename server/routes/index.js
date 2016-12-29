@@ -10,6 +10,7 @@ var storage = multer.diskStorage({
   },
   filename: function(req, file, cb) {
 	var date = new Date()
+   console.log('FILLLEE USERNAME', req.body.username)
     cb(null, req.body.username + '-' + date);
   }
 });
